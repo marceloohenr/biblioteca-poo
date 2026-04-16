@@ -1,0 +1,77 @@
+classDiagram
+    class Pessoa {
+        <<abstract>>
+        -int id
+        -String nome
+        -String email
+        +getId() int
+        +setId(int id) void
+        +getNome() String
+        +setNome(String nome) void
+        +getEmail() String
+        +setEmail(String email) void
+        +exibirDados() String
+    }
+
+    class Usuario {
+        -String matricula
+        +getMatricula() String
+        +setMatricula(String matricula) void
+        +exibirDados() String
+    }
+
+    class Bibliotecario {
+        -String cargo
+        +getCargo() String
+        +setCargo(String cargo) void
+        +exibirDados() String
+    }
+
+    class Livro {
+        -int id
+        -String titulo
+        -String autor
+        -int anoPublicacao
+        -boolean disponivel
+        +emprestar() boolean
+        +devolver() void
+        +exibirDados() String
+    }
+
+    class Emprestimo {
+        -int id
+        -Usuario usuario
+        -Livro livro
+        -LocalDate dataEmprestimo
+        -LocalDate dataDevolucao
+        -boolean ativo
+        +finalizarEmprestimo() void
+        +exibirDados() String
+    }
+
+    class Biblioteca {
+        -ArrayList~Livro~ livros
+        -ArrayList~Usuario~ usuarios
+        -ArrayList~Emprestimo~ emprestimos
+        +cadastrarLivro(Livro livro) void
+        +cadastrarUsuario(Usuario usuario) void
+        +listarLivros() void
+        +listarUsuarios() void
+        +realizarEmprestimo(int idLivro, int idUsuario) boolean
+        +realizarDevolucao(int idEmprestimo) boolean
+        +listarEmprestimosAtivos() void
+    }
+
+    class Main {
+        +main(String[] args) void
+    }
+
+    Pessoa <|-- Usuario
+    Pessoa <|-- Bibliotecario
+    Emprestimo --> Usuario
+    Emprestimo --> Livro
+    Biblioteca o-- Livro
+    Biblioteca o-- Usuario
+    Biblioteca o-- Emprestimo
+    Main --> Biblioteca
+

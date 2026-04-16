@@ -31,7 +31,20 @@ Criar um sistema em Java que organize as principais informacoes de uma bibliotec
 
 ## Situacao do projeto
 
-- Etapa 1: proposta do projeto
-- Etapa 2: modelagem UML
-- Etapa 3: prototipo funcional em Java
+- Etapa 1: proposta do projeto concluida
+- Etapa 2: modelagem UML concluida
+- Etapa 3: prototipo funcional em Java em desenvolvimento
 
+## Modelagem das classes
+
+O sistema foi pensado com classes simples, separando as informacoes principais da biblioteca.
+
+- `Pessoa`: classe base para representar dados comuns de pessoas do sistema.
+- `Usuario`: representa o usuario que pode pegar livros emprestados.
+- `Bibliotecario`: representa o funcionario responsavel pela biblioteca.
+- `Livro`: representa um livro cadastrado e controla se ele esta disponivel.
+- `Emprestimo`: representa o emprestimo de um livro para um usuario.
+- `Biblioteca`: concentra as listas de livros, usuarios e emprestimos, alem das operacoes principais.
+- `Main`: classe usada para executar o sistema pelo terminal.
+
+O diagrama de classes esta na pasta `docs`.
