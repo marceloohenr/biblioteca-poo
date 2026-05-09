@@ -33,6 +33,13 @@ Criar um sistema em Java que organize as principais informações de uma bibliot
 - Registro de empréstimos
 - Devolução de livros
 - Consulta de empréstimos ativos
+- Edição de livros por ID
+- Remoção de livros com validação de empréstimo ativo
+- Edição de usuários por ID
+- Remoção de usuários com validação de empréstimo ativo
+- Busca de livro por ID e por trecho de título
+- Busca de usuário por ID e por trecho de nome
+- Tratamento de entradas inválidas no fluxo do menu
 
 ## Integrantes
 
